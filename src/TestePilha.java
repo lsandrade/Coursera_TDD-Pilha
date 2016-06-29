@@ -24,13 +24,17 @@ public class TestePilha {
 	}
 	
 	@Test
-	public void empilhaDoisElementos(){
+	public void empilhaEDesempilha(){
 		Pilha p = new Pilha(10);
 		p.empilha("primeiro");
 		p.empilha("segundo");
-		assertFalse(p.estaVazia());
 		assertEquals(2,p.tamanho());
 		assertEquals("segundo",p.topo());
+		
+		Object desempilhado = p.desempilha();
+		assertEquals(1,p.tamanho());
+		assertEquals("primeiro",p.topo());
+		assertEquals("segundo",desempilhado);
 		
 	}
 
