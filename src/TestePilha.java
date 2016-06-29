@@ -22,5 +22,16 @@ public class TestePilha {
 		assertEquals("primeiro",p.topo());
 		
 	}
+	
+	@Test
+	public void empilhaDoisElementos(){
+		Pilha p = new Pilha(10);
+		p.empilha("primeiro");
+		p.empilha("segundo");
+		assertFalse(p.estaVazia());
+		assertEquals(2,p.tamanho());
+		assertEquals("segundo",p.topo());
+		
+	}
 
 }
